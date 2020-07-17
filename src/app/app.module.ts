@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { MainViewComponent } from './main-view/main-view.component';
 import { RegistrationComponent } from './registration/registration.component';
 
@@ -9,10 +10,11 @@ import { RegistrationComponent } from './registration/registration.component';
   declarations: [
     AppComponent,
     MainViewComponent,
-    RegistrationComponent
+    RegistrationComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
