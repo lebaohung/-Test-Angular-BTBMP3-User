@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Angular-BTBMP3"
+    }
+  },
+  "defaultProject": "Angular-BTBMP3",
+  "cli": {
+    "analytics": false
+  }
 }
