@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {Users} from '../model/users';
-import {UsersService} from '../service/users.service';
+import {Users} from '../../model/users';
+import {UsersService} from '../../service/users.service';
 
 function comparePassword(c: AbstractControl): any {
   const v = c.value;
@@ -35,7 +35,7 @@ export class RegistrationComponent implements OnInit {
     this.userFormData = new FormData();
   }
 
-  onSubmit(): void{
+  onSubmitRegister(): void{
     const user: Users = this.registrationForm.value;
     this.userFormData.append('idUsers', '1');
     this.userFormData.append('username', user.username);
@@ -44,7 +44,6 @@ export class RegistrationComponent implements OnInit {
     this.userFormData.append('confirmpassword', this.registrationForm.getRawValue().pw.confirmpassword);
     this.userFormData.append('fullname', user.fullname);
     this.userFormData.append('phonenumber', user.phonenumber);
-    console.log(this.userFormData.get('password'));
     this.usersService.registration(this.userFormData).subscribe(() => alert('OK'));
   }
 
