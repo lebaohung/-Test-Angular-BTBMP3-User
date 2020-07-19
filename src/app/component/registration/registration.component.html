@@ -15,7 +15,7 @@
           <h3>Welcome To BTBMp3</h3>
           <!-- Login Form -->
           <div class="login-form">
-            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="registrationForm" (ngSubmit)="onSubmitRegister()">
               <input type="hidden" formControlName="idUsers" value="1">
               <div class="form-group">
                 <label for="exampleInputEmail1">Username</label>
@@ -61,4 +61,4 @@
     </div>
   </div>
 </section>
-<!-- ##### Login Area End ##### -->
+<!-- ##### Registration Area End ##### -->
