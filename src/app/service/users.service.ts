@@ -21,4 +21,8 @@ export class UsersService {
   login(user: UserLogin): Observable<any>{
     return this.http.post(this.API_LOGIN_GET_JWT, user);
   }
+
+  getAllUsers(): Observable<Users[]> {
+    return this.http.get<Users[]>('http://localhost:8080/users/showList');
+  }
 }
