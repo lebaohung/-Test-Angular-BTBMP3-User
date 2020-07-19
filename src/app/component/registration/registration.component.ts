@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {Users} from '../model/users';
-import {UsersService} from '../service/users.service';
+import {Users} from '../../model/users';
+import {UsersService} from '../../service/users.service';
 
 function comparePassword(c: AbstractControl): any {
   const v = c.value;
